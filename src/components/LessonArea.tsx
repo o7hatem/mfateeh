@@ -1,7 +1,4 @@
-import { logger } from "../lib/logger";
-
 import { useEffect, useState } from "react";
-import type { JSX } from "react";
 
 import { registerKey, updateClassName } from "../services/typing.service";
 

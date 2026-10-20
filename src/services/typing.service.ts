@@ -36,7 +36,7 @@ function updateClassName(
   targetCharIndex: number,
   currentKeyStrokes: string[],
 ) {
-  let classNames: string[] = ["letter"];
+  const classNames: string[] = ["letter"];
   const isCorrect = targetChar === currentKeyStrokes[targetCharIndex];
   const beenTyped = targetCharIndex < currentKeyStrokes.length;
 
