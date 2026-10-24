@@ -13,7 +13,6 @@ export default function LessonArea({ lessonText }: LessonAreaProps) {
 
   const letterSpans = Array.from(lessonText).map((char, index) => {
     const className: string = updateClassName(char, index, keyStrokes);
-
     return (
       <span key={index} className={className}>
         {char}
@@ -37,7 +36,6 @@ export default function LessonArea({ lessonText }: LessonAreaProps) {
     <>
       <div className="lesson-area-container">
         <p>{letterSpans}</p>
-        <p>{keyStrokes}</p>
       </div>
     </>
   );

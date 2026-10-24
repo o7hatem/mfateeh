@@ -1,6 +1,6 @@
 .lesson-area-container {
   width: 80vw;
-  height: 40vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,12 +19,15 @@
 
 .letter {
   color: blueviolet;
+  font-size: 2rem;
 }
 
 .correct {
   color: green;
+  background-color: aquamarine;
 }
 
 .incorrect {
   color: red;
+  background-color: chocolate;
 }

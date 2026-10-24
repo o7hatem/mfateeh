@@ -19,6 +19,10 @@ function registerKey(e: KeyboardEvent, currentKeyStrokes: string[]) {
     action: "registering key",
   });
 
+  if (e.repeat) {
+    return currentKeyStrokes;
+  }
+
   if (e.code === "Backspace") {
     return currentKeyStrokes.slice(0, -1);
   }
