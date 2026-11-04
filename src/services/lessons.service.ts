@@ -1,10 +1,10 @@
 import generateRandomArray from "../utils/generateRandomArray";
 
-function Type0Lesson(letter: string): string {
+function Type0LessonText(letter: string): string {
   return Array<string>(5).fill(letter).join("");
 }
 
-function Type1Lesson(letters: [string, string]): string {
+function Type1LessonText(letters: [string, string]): string {
   const pattern: number[] = [0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1];
 
   const lessonText = Array.from({ length: pattern.length }, (_, index) => {
@@ -14,7 +14,7 @@ function Type1Lesson(letters: [string, string]): string {
   return lessonText.join("");
 }
 
-function Type2Lesson(letters: string[]): string {
+function Type2LessonText(letters: string[]): string {
   const pattern: number[][] = generateRandomArray(12, 4, 0, letters.length - 1);
 
   const letterIndeces: string[][] = pattern.map((wordPattern) =>
@@ -26,4 +26,8 @@ function Type2Lesson(letters: string[]): string {
   return words.join(" ");
 }
 
-export { Type0Lesson, Type1Lesson, Type2Lesson };
+export {
+  Type0LessonText as Type0Lesson,
+  Type1LessonText as Type1Lesson,
+  Type2LessonText as Type2Lesson,
+};

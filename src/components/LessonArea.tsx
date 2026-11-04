@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { Layout } from "antd";
+
+import NavBar from "./NavBar";
 
 import { registerKey, updateClassName } from "../services/typing.service";
 
@@ -34,9 +37,20 @@ export default function LessonArea({ lessonText }: LessonAreaProps) {
 
   return (
     <>
-      <div className="lesson-area-container">
-        <p>{letterSpans}</p>
-      </div>
+      <Layout>
+        {/* The navbar should not be here. It should be a common component in each page */}
+        {/* This should change once I add a router*/}
+        <NavBar />
+
+        <div className="lesson-container">
+          <div className="lesson-text-container">
+            <p>{letterSpans}</p>
+          </div>
+          <div className="heatmap-container">
+            <p>HEATMAP</p>
+          </div>
+        </div>
+      </Layout>
     </>
   );
 }

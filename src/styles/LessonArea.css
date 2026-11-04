@@ -1,24 +1,48 @@
-.lesson-area-container {
-  width: 80vw;
-  height: 50vh;
+.lesson-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+.lesson-text-container {
+  height: 30%;
+  width: 80%;
+  margin: 20px 0px 20px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: right;
-  background-color: rgb(203, 230, 231);
-  color: black;
+  background-color: --primary-color;
+  border: 3px solid;
+  border-radius: 10px;
 }
 
-.lesson-area-container p {
-  width: 60%;
-  text-align: left;
+.heatmap-container {
+  height: 40%;
+  width: 80%;
+  margin: 20px 0px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  background-color: --primary-color;
+  border: 3px solid;
+  border-radius: 10px;
+}
+
+.lesson-text-container p {
+  margin: 0px 20px 0px 20px;
   word-spacing: 0.5rem;
-  line-height: 2rem;
+  line-height: 3rem;
 }
 
 .letter {
-  color: blueviolet;
+  color: #4d4c5c;
   font-size: 2rem;
 }
 
