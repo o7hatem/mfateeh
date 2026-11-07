@@ -1,5 +1,5 @@
 import "../styles/LessonSection.css";
-import type { Lesson } from "../types/lessons.types";
+import type { Lesson } from "../types";
 
 type LessonGridProps = {
   lessons: Lesson[];

@@ -3,7 +3,7 @@ const { Content } = Layout;
 
 import NavBar from "./NavBar";
 import LessonSection from "./LessonSection";
-import type { Lesson } from "../types/lessons.types";
+import type { Lesson } from "../types";
 import { Type1Lesson } from "../services/lessons.service";
 
 export default function HomePage() {

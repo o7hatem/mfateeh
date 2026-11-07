@@ -1,6 +1,6 @@
 import LessonGrid from "./LessonGrid";
 
-import { type Lesson } from "../types/lessons.types";
+import { type Lesson } from "../types";
 
 import "../styles/LessonSection.css";
 
