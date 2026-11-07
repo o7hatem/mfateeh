@@ -1,6 +1,9 @@
 import "./App.css";
+import NavBar from "./components/NavBar";
 import HomePage from "./components/HomePage";
 import { Type2Lesson } from "./services/lessons.service";
+import { Layout } from "antd";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   // const lessonText =
@@ -9,7 +12,17 @@ function App() {
   // const lessonText = Type1Lesson(["f", "j"]);
   const lessonText = Type2Lesson(["ب", "ت", "ي", "d"]);
   // const lessonText = "هل أنت سعيد؟";
-  return <HomePage />;
+
+  return (
+    <>
+      <Layout>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </Layout>
+    </>
+  );
 }
 
 export default App;

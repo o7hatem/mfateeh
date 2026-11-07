@@ -1,7 +1,6 @@
 import { Layout } from "antd";
 const { Content } = Layout;
 
-import NavBar from "./NavBar";
 import LessonSection from "./LessonSection";
 import type { Lesson } from "../types";
 import { Type1Lesson } from "../services/lessons.service";
@@ -23,20 +22,16 @@ export default function HomePage() {
   ];
   return (
     <>
-      <Layout>
-        <NavBar />
-
-        <Content>
-          <LessonSection
-            sectionHeader="الصف المرجعي"
-            sectionLessons={lessonList}
-          />
-          <LessonSection
-            sectionHeader="الصف المرجعي"
-            sectionLessons={lessonList}
-          />
-        </Content>
-      </Layout>
+      <Content>
+        <LessonSection
+          sectionHeader="الصف المرجعي"
+          sectionLessons={lessonList}
+        />
+        <LessonSection
+          sectionHeader="الصف المرجعي"
+          sectionLessons={lessonList}
+        />
+      </Content>
     </>
   );
 }
