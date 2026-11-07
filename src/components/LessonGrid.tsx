@@ -1,15 +1,19 @@
 import "../styles/LessonSection.css";
+import type { Lesson } from "../types/lessons.types";
 
 type LessonGridProps = {
-  lessons: string[];
+  lessons: Lesson[];
 };
 
 export default function LessonGrid({ lessons }: LessonGridProps) {
   return (
     <>
       <div className="lesson-grid-container">
-        {lessons.map((lesson) => (
-          <p>{lesson}</p>
+        {lessons.map((lesson: Lesson) => (
+          // This should be converted to a button
+          <div>
+            <p>{lesson.lessonName}</p>
+          </div>
         ))}
       </div>
     </>

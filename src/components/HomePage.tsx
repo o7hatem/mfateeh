@@ -3,8 +3,24 @@ const { Content } = Layout;
 
 import NavBar from "./NavBar";
 import LessonSection from "./LessonSection";
+import type { Lesson } from "../types/lessons.types";
+import { Type1Lesson } from "../services/lessons.service";
 
 export default function HomePage() {
+  const lessonList: Lesson[] = [
+    {
+      lessonName: "Lesson 1",
+      lessonContent: Type1Lesson(["a", "b"]),
+    },
+    {
+      lessonName: "Lesson 2",
+      lessonContent: Type1Lesson(["c", "d"]),
+    },
+    {
+      lessonName: "Lesson 3",
+      lessonContent: Type1Lesson(["e", "f"]),
+    },
+  ];
   return (
     <>
       <Layout>
@@ -13,11 +29,11 @@ export default function HomePage() {
         <Content>
           <LessonSection
             sectionHeader="الصف المرجعي"
-            sectionLessons={["lesson1", "lesson2", "lesson3"]}
+            sectionLessons={lessonList}
           />
           <LessonSection
             sectionHeader="الصف المرجعي"
-            sectionLessons={["lesson4", "lesson5", "lesson6"]}
+            sectionLessons={lessonList}
           />
         </Content>
       </Layout>

@@ -1,10 +1,12 @@
 import LessonGrid from "./LessonGrid";
 
+import { type Lesson } from "../types/lessons.types";
+
 import "../styles/LessonSection.css";
 
 type LessonSectionProps = {
   sectionHeader: string;
-  sectionLessons: string[];
+  sectionLessons: Lesson[];
 };
 
 export default function LessonSection({
