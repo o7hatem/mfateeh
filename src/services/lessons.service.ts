@@ -26,8 +26,4 @@ function Type2LessonText(letters: string[]): string {
   return words.join(" ");
 }
 
-export {
-  Type0LessonText as Type0Lesson,
-  Type1LessonText as Type1Lesson,
-  Type2LessonText as Type2Lesson,
-};
+export { Type0LessonText, Type1LessonText, Type2LessonText };
