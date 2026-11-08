@@ -7,7 +7,7 @@
   background-color: aliceblue;
 }
 
-.lesson-text-container {
+.lesson-text {
   height: 30%;
   width: 80%;
   margin: 20px 0px 20px 0px;
@@ -19,6 +19,11 @@
   background-color: --primary-color;
   border: 3px solid;
   border-radius: 10px;
+}
+
+.lesson-text p {
+  letter-spacing: 1em;
+  word-spacing: 1rem;
 }
 
 .heatmap-container {
@@ -33,12 +38,6 @@
   background-color: --primary-color;
   border: 3px solid;
   border-radius: 10px;
-}
-
-.lesson-text-container p {
-  margin: 0px 20px 0px 20px;
-  word-spacing: 0.5rem;
-  line-height: 3rem;
 }
 
 .letter {

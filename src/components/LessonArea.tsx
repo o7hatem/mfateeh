@@ -1,17 +1,22 @@
 import { useEffect, useState } from "react";
 import { Layout } from "antd";
 
-import NavBar from "./NavBar";
-
 import { registerKey, updateClassName } from "../services/typing.service";
 
+import { home_row_section } from "../lessons/home-row";
 import "../styles/LessonArea.css";
+import { useParams } from "react-router-dom";
+import { logger } from "../lib/logger";
 
-type LessonAreaProps = {
-  lessonText: string;
-};
+export default function LessonArea() {
+  const { lessonId } = useParams();
+  const id = parseInt(lessonId ? lessonId : "1");
 
-export default function LessonArea({ lessonText }: LessonAreaProps) {
+  logger.debug(`Lesson with param ${id} is being called`);
+  logger.debug(`Lesson with index ${lessonId} is being called`);
+
+  const lessonText = home_row_section[id - 1].lessonContent;
+
   const [keyStrokes, setKeyStrokes] = useState<string[]>([]);
 
   const letterSpans = Array.from(lessonText).map((char, index) => {
@@ -38,12 +43,8 @@ export default function LessonArea({ lessonText }: LessonAreaProps) {
   return (
     <>
       <Layout>
-        {/* The navbar should not be here. It should be a common component in each page */}
-        {/* This should change once I add a router*/}
-        <NavBar />
-
         <div className="lesson-container">
-          <div className="lesson-text-container">
+          <div className="lesson-text">
             <p>{letterSpans}</p>
           </div>
           <div className="heatmap-container">
