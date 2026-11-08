@@ -5,16 +5,23 @@
 .lesson-section-header {
   text-align: start;
 }
+
 .lesson-grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   gap: 10px;
   justify-items: start;
 }
 
-.lesson-grid-container p {
-  background-color: aquamarine;
-  padding: 20px;
-  color: blueviolet;
-  font-size: 22px;
+.lesson-grid-item {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.lesson-grid-item:hover {
+  background-color: #0056b3;
 }

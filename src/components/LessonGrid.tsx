@@ -16,7 +16,10 @@ export default function LessonGrid({ lessons }: LessonGridProps) {
             `The value for lesson.lessonIndex ${lesson.lessonIndex}`,
           );
           return (
-            <Link to={`/lesson/${lesson.lessonIndex}`}>
+            <Link
+              to={`/lesson/${lesson.lessonIndex}`}
+              className="lesson-grid-item"
+            >
               {lesson.lessonName}
             </Link>
           );
