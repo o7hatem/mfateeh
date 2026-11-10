@@ -1,4 +1,4 @@
-import { Type1LessonText } from "../services/lessons.service";
+import { Type1LessonText, Type2LessonText } from "../services/lessons.service";
 import type { Lesson } from "../types";
 
 export const home_row_section: Lesson[] = [
@@ -19,7 +19,7 @@ export const home_row_section: Lesson[] = [
   },
   {
     lessonIndex: 4,
-    lessonName: "S and L",
-    lessonContent: Type1LessonText(["s", "l"]),
+    lessonName: "Words Text",
+    lessonContent: Type2LessonText(["s", "l"]),
   },
 ];

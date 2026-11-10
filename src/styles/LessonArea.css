@@ -1,4 +1,4 @@
-.lesson-container {
+.lesson-section {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,18 +15,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: right;
   background-color: --primary-color;
   border: 3px solid;
   border-radius: 10px;
 }
 
 .lesson-text p {
-  letter-spacing: 1em;
+  letter-spacing: 0.5em;
   word-spacing: 1rem;
 }
 
-.heatmap-container {
+.heatmap-section {
   height: 40%;
   width: 80%;
   margin: 20px 0px 20px 0px;
@@ -34,7 +33,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: right;
   background-color: --primary-color;
   border: 3px solid;
   border-radius: 10px;

@@ -1,19 +1,17 @@
 import { useEffect, useState } from "react";
-import { Layout } from "antd";
+import { ConfigProvider, Layout } from "antd";
+
+import Heatmap from "./Heatmap";
 
 import { registerKey, updateClassName } from "../services/typing.service";
 
 import { home_row_section } from "../lessons/home-row";
 import "../styles/LessonArea.css";
 import { useParams } from "react-router-dom";
-import { logger } from "../lib/logger";
 
 export default function LessonArea() {
   const { lessonId } = useParams();
   const id = parseInt(lessonId ? lessonId : "1");
-
-  logger.debug(`Lesson with param ${id} is being called`);
-  logger.debug(`Lesson with index ${lessonId} is being called`);
 
   const lessonText = home_row_section[id - 1].lessonContent;
 
@@ -27,6 +25,7 @@ export default function LessonArea() {
       </span>
     );
   });
+  const expectedLetter = lessonText[keyStrokes.length];
 
   const handleKeyDown = (e: KeyboardEvent) => {
     setKeyStrokes((prev) => registerKey(e, prev));
@@ -43,12 +42,12 @@ export default function LessonArea() {
   return (
     <>
       <Layout>
-        <div className="lesson-container">
+        <div className="lesson-section">
           <div className="lesson-text">
             <p>{letterSpans}</p>
           </div>
-          <div className="heatmap-container">
-            <p>HEATMAP</p>
+          <div className="heatmap-section">
+            <Heatmap expectedLetter={expectedLetter} />
           </div>
         </div>
       </Layout>
