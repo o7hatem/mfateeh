@@ -13,8 +13,8 @@ const modifierKeys = [
   "Escape",
 ];
 
-function registerKey(e: KeyboardEvent, currentKeyStrokes: string[]) {
-  logger.debug("Key Stroke code", {
+function registerKey(e: KeyboardEvent, currentKeyStrokes: KeyboardEvent[]) {
+  logger.debug(`Key Stroke code ${e.code}`, {
     feature: "Lesson area",
     action: "registering key",
   });
@@ -29,7 +29,7 @@ function registerKey(e: KeyboardEvent, currentKeyStrokes: string[]) {
 
   const isLetter = !modifierKeys.includes(e.code);
   if (isLetter) {
-    return [...currentKeyStrokes, e.key];
+    return [...currentKeyStrokes, e];
   }
 
   return currentKeyStrokes;
@@ -38,19 +38,23 @@ function registerKey(e: KeyboardEvent, currentKeyStrokes: string[]) {
 function updateClassName(
   targetChar: string,
   targetCharIndex: number,
-  currentKeyStrokes: string[],
-) {
-  const classNames: string[] = ["letter"];
-  const isCorrect = targetChar === currentKeyStrokes[targetCharIndex];
-  const beenTyped = targetCharIndex < currentKeyStrokes.length;
+  currentKeyStrokes: KeyboardEvent[],
+): string {
+  try {
+    const classNames: string[] = ["letter"];
+    const isCorrect = targetChar === currentKeyStrokes[targetCharIndex].key;
+    const beenTyped = targetCharIndex < currentKeyStrokes.length;
 
-  if (beenTyped && isCorrect) {
-    classNames.push("correct");
-  } else if (beenTyped && !isCorrect) {
-    classNames.push("incorrect");
+    if (beenTyped && isCorrect) {
+      classNames.push("correct");
+    } else if (beenTyped && !isCorrect) {
+      classNames.push("incorrect");
+    }
+
+    return classNames.join(" ");
+  } catch (error) {
+    return "letter";
   }
-
-  return classNames.join(" ");
 }
 
 export { registerKey, updateClassName };

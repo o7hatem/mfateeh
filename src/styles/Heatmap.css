@@ -37,19 +37,22 @@
 
 .tab-key {
   flex: 1.5;
+  padding: 10px 10px 10px 15px;
 }
 
 .caps-lock {
-  flex: 2;
+  flex: 3;
   min-width: 80px;
   font-size: 0.7rem;
-  padding: 10px 10px;
+  padding: 10px 10px 10px 15px;
   font-weight: 600;
   white-space: nowrap;
 }
 
 .shift {
-  flex: 1.8;
+  flex: 3;
+  text-align: left;
+  padding-left: 15px;
 }
 
 .space {
@@ -57,5 +60,9 @@
 }
 
 .empty-key {
+  flex: 4;
+}
+
+.enter {
   flex: 4;
 }

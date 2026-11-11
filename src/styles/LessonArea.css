@@ -21,8 +21,8 @@
 }
 
 .lesson-text p {
-  letter-spacing: 0.5em;
-  word-spacing: 1rem;
+  letter-spacing: var(--lesson-letter-spacing);
+  word-spacing: var(--lesson-letter-spacing);
 }
 
 .heatmap-section {

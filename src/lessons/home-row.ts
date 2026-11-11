@@ -1,7 +1,7 @@
 import { Type1LessonText, Type2LessonText } from "../services/lessons.service";
 import type { Lesson } from "../types";
 
-export const home_row_section: Lesson[] = [
+export const home_row_lessons: Lesson[] = [
   {
     lessonIndex: 1,
     lessonName: "F and J",

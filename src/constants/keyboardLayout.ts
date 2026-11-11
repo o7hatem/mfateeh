@@ -1,0 +1,110 @@
+import { type KeyDefinition } from "../types/keyboard.types";
+
+export const KEYBOARD_LAYOUT: KeyDefinition[][] = [
+  // Upper Row
+  [
+    {
+      code: "Tab",
+      label: "Tab",
+      values: [],
+      styleClassName: "tab-key",
+      finger: "left-pinky",
+    },
+    { code: "KeyQ", label: "Q", values: ["q", "Q"], finger: "left-pinky" },
+    { code: "KeyW", label: "W", values: ["w", "W"], finger: "left-ring" },
+    { code: "KeyE", label: "E", values: ["e", "E"], finger: "left-middle" },
+    { code: "KeyR", label: "R", values: ["r", "R"], finger: "left-index" },
+    { code: "KeyT", label: "T", values: ["t", "T"], finger: "left-index" },
+    { code: "KeyY", label: "Y", values: ["y", "Y"], finger: "right-index" },
+    { code: "KeyU", label: "U", values: ["u", "U"], finger: "right-index" },
+    { code: "KeyI", label: "I", values: ["i", "I"], finger: "right-middle" },
+    { code: "KeyO", label: "O", values: ["o", "O"], finger: "right-ring" },
+    { code: "KeyP", label: "P", values: ["p", "P"], finger: "right-pinky" },
+    {
+      code: "BracketLeft",
+      label: "[",
+      values: ["[", "{"],
+      finger: "right-pinky",
+    },
+    {
+      code: "BracketRight",
+      label: "]",
+      values: ["]", "}"],
+      finger: "right-pinky",
+    },
+  ],
+  // Home Row
+  [
+    {
+      code: "CapsLock",
+      label: "Caps Lock",
+      values: [],
+      styleClassName: "caps-lock",
+      finger: "left-pinky",
+    },
+    { code: "KeyA", label: "A", values: ["a", "A"], finger: "left-pinky" },
+    { code: "KeyS", label: "S", values: ["s", "S"], finger: "left-ring" },
+    { code: "KeyD", label: "D", values: ["d", "D"], finger: "left-middle" },
+    { code: "KeyF", label: "F", values: ["f", "F"], finger: "left-index" },
+    { code: "KeyG", label: "G", values: ["g", "G"], finger: "left-index" },
+    { code: "KeyH", label: "H", values: ["h", "H"], finger: "right-index" },
+    { code: "KeyJ", label: "J", values: ["j", "J"], finger: "right-index" },
+    { code: "KeyK", label: "K", values: ["k", "K"], finger: "right-middle" },
+    { code: "KeyL", label: "L", values: ["l", "L"], finger: "right-ring" },
+    {
+      code: "Semicolon",
+      label: ";",
+      values: [";", ":"],
+      finger: "right-pinky",
+    },
+    { code: "Quote", label: "'", values: ["'", '"'], finger: "right-pinky" },
+    {
+      code: "Enter",
+      label: "Enter",
+      values: ["\n"],
+      styleClassName: "enter",
+      finger: "right-pinky",
+    },
+  ],
+  // Lower Row
+  [
+    {
+      code: "ShiftLeft",
+      label: "Shift",
+      values: [],
+      styleClassName: "shift",
+      finger: "left-pinky",
+    },
+    { code: "KeyZ", label: "Z", values: ["z", "Z"], finger: "left-pinky" },
+    { code: "KeyX", label: "X", values: ["x", "X"], finger: "left-ring" },
+    { code: "KeyC", label: "C", values: ["c", "C"], finger: "left-middle" },
+    { code: "KeyV", label: "V", values: ["v", "V"], finger: "left-index" },
+    { code: "KeyB", label: "B", values: ["b", "B"], finger: "left-index" },
+    { code: "KeyN", label: "N", values: ["n", "N"], finger: "right-index" },
+    { code: "KeyM", label: "M", values: ["m", "M"], finger: "right-index" },
+    { code: "Comma", label: ",", values: [",", "<"], finger: "right-middle" },
+    { code: "Period", label: ".", values: [".", ">"], finger: "right-ring" },
+    { code: "Slash", label: "/", values: ["/", "?"], finger: "right-pinky" },
+    {
+      code: "ShiftRight",
+      label: "Shift",
+      values: [],
+      styleClassName: "shift",
+      finger: "right-pinky",
+    },
+  ],
+  // Modifiers Row
+  [
+    { code: "ControlLeft", label: "Ctrl", values: [], finger: "left-pinky" },
+    { code: "AltLeft", label: "Alt", values: [], finger: "thumb" },
+    {
+      code: "Space",
+      label: "Space",
+      values: [" "],
+      styleClassName: "space",
+      finger: "thumb",
+    },
+    { code: "AltRight", label: "Alt", values: [], finger: "thumb" },
+    { code: "ControlRight", label: "Ctrl", values: [], finger: "right-pinky" },
+  ],
+];

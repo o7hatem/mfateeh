@@ -2,7 +2,7 @@ import { Layout } from "antd";
 const { Content } = Layout;
 
 import LessonSection from "./LessonSection";
-import { home_row_section } from "../lessons/home-row";
+import { home_row_lessons } from "../lessons/home-row";
 
 export default function HomePage() {
   return (
@@ -10,11 +10,11 @@ export default function HomePage() {
       <Content>
         <LessonSection
           sectionHeader="الصف المرجعي"
-          sectionLessons={home_row_section}
+          sectionLessons={home_row_lessons}
         />
         <LessonSection
           sectionHeader="الصف المرجعي"
-          sectionLessons={home_row_section}
+          sectionLessons={home_row_lessons}
         />
       </Content>
     </>

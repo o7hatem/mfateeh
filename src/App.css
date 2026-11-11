@@ -21,9 +21,8 @@
   --spacing-sm: 8px;
   --spacing-md: 16px;
   --spacing-lg: 24px;
-
-  /* Layout */
-  /* --container-width: 1200px; */
+  --lesson-letter-spacing: 0.2rem;
+  --lesson-word-spacing: 1rem;
 }
 
 html {
